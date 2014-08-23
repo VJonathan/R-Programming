@@ -1,0 +1,33 @@
+## Creacion de la matriz
+makeCacheMatrix <- function(la_matriz = matrix()) { 
+	##Inicializo la matriz siguiente en Ceros
+   nueva_matriz <- NULL
+   ##Matriz inicial 
+   				 adjunta <- function(matrix) {
+           				 la_matriz <<- matrix
+           				 nueva_matriz <<- NULL}
+    
+    							toma <- function() {
+    								la_matriz }
+    ##Para tomar los valores de la nueva matriz
+    											adjunta_inversa <- function(inverse) {
+       											nueva_matriz <<- inverse }
+
+   																	 toma_inversa <- function() {
+     						  											 nueva_matriz }
+}
+
+## Devuelve la Matriz inversa
+cacheSolve <- function(x, ...) {
+    la_matriz <- x$toma_inversa()
+ ##Compara si la matriz ya existe
+    if( la_matriz==nueva_matriz) {
+            print("Matriz ya existente")
+            return(la_matriz)
+   			  }
+  ##Obtiene la matriz inversa con el operador solve()
+    valores_matriz <- x$adjunta()
+    la_matriz <- solve(valores_matriz)
+    x$adjunta_inversa(la_matriz)
+    print(la_matriz)
+}
